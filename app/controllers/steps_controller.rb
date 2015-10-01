@@ -3,10 +3,6 @@ class StepsController < ApplicationController
     @steps = Step.all
   end
 
-  def view
-
-  end
-
   def show
   end
 
@@ -19,31 +15,24 @@ class StepsController < ApplicationController
 
   def create
     @step = Step.new(step_params)
-
-    respond_to do |format|
-      if @step.save
-        format.html { redirect_to @step, notice: 'Step was successfully created.' }
-      else
-        format.html { render :new }
-      end
+    if @step.save
+      redirect_to @step, notice: 'Step was successfully created.'
+    else
+      render :new
     end
   end
 
   def update
-    respond_to do |format|
-      if @step.update(step_params)
-        format.html { redirect_to @step, notice: 'Step was successfully updated.' }
-      else
-        format.html { render :edit }
-      end
+    if @step.update(step_params)
+      redirect_to @step, notice: 'Step was successfully updated.'
+    else
+      render :edit
     end
   end
 
   def destroy
     @step.destroy
-    respond_to do |format|
-      format.html { redirect_to steps_url, notice: 'Step was successfully destroyed.' }
-    end
+    redirect_to steps_url, notice: 'Step was successfully destroyed.' 
   end
 
   private
