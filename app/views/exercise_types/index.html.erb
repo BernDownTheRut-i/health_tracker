@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Exercise Types</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exercise_types.each do |e| %>
+      <tr>
+        <td><%= e.name %></td>
+        <td><%= link_to 'Show', e %></td>
+        <td><%= link_to 'Edit', edit_exercise_type_path(e) %></td>
+        <td><%= link_to 'Destroy', e, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exercise Type', new_exercise_type_path %>
