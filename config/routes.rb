@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
 
+  root 'dashboard#index'
   resources :exercises
   resources :exercise_types
   resources :calories
+  resources :weights
+  resources :steps
+  get 'dashboard/index'
+
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
