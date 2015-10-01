@@ -30,7 +30,6 @@ class WeightsController < ApplicationController
     else
       render :new
     end
-    end
   end
 
   # PATCH/PUT /weights/1
@@ -47,7 +46,7 @@ class WeightsController < ApplicationController
   # DELETE /weights/1.json
   def destroy
     @weight.destroy
-    redirect_to weights_url, notice: 'Weight was successfully destroyed.' 
+    redirect_to weights_url, notice: 'Weight was successfully destroyed.'
   end
 
   private
