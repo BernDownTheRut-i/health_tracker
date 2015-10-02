@@ -53,6 +53,6 @@ class CaloricsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def caloric_params
-      params.require(:caloric).permit(:date, :numer)
+      params.require(:caloric).permit(:date, :number)
     end
 end

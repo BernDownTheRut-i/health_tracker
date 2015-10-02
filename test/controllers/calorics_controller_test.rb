@@ -18,7 +18,7 @@ class CaloricsControllerTest < ActionController::TestCase
 
   test "should create caloric" do
     assert_difference('Caloric.count') do
-      post :create, caloric: { date: @caloric.date, numer: @caloric.numer }
+      post :create, caloric: { date: @caloric.date, number: @caloric.number }
     end
 
     assert_redirected_to caloric_path(assigns(:caloric))
@@ -35,7 +35,7 @@ class CaloricsControllerTest < ActionController::TestCase
   end
 
   test "should update caloric" do
-    patch :update, id: @caloric, caloric: { date: @caloric.date, numer: @caloric.numer }
+    patch :update, id: @caloric, caloric: { date: @caloric.date, number: @caloric.number }
     assert_redirected_to caloric_path(assigns(:caloric))
   end
 
