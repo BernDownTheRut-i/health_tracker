@@ -21,7 +21,7 @@ class WeightsControllerTest < ActionController::TestCase
       post :create, weight: { date: @weight.date, number: @weight.number }
     end
 
-    assert_redirected_to_weight_path(assigns(:weight))
+    assert_redirected_to weight_path(assigns(:weight))
   end
 
   test "should show weight" do
@@ -36,7 +36,7 @@ class WeightsControllerTest < ActionController::TestCase
 
   test "should update weight" do
     patch :update, id: @weight, weight: { date: @weight.date, number: @weight.number }
-    assert_redirected_to_weight_path(assigns(:weight))
+    assert_redirected_to weight_path(assigns(:weight))
   end
 
   test "should destroy weight" do
