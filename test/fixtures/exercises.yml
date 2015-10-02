@@ -9,3 +9,8 @@ two:
   date: <%= Date.today %>
   exercise_type_id: 1
   duration: 45
+
+three:
+  date: <%= Date.today %>
+  exercise_type_id: 1
+  duration: 45

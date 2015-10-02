@@ -6,9 +6,10 @@ class Exercise < ActiveRecord::Base
   end
 
   def self.calories_burned_today
-    Exercise.where(date: Date.today).reduce(0) do |sum, e|
+    cb = Exercise.where(date: Date.today).reduce(0) do |sum, e|
       sum += e.calories_burned
     end
+    cb.abs
   end
 
 end
