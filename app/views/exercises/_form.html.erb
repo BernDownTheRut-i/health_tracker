@@ -35,11 +35,6 @@
     <%= f.collection_select :exercise_type_id, ExerciseType.order(:name), :id, :name, include_blank: true %> | <%= link_to 'New Exercise Type', new_exercise_type_path %>
   </div>
 
-  <div class="field">
-    <%= f.label "Calories Expended" %><br>
-    <%= f.number_field :calories_expended %>
-  </div>
-
   <div class="actions">
     <%= f.submit %>
   </div>

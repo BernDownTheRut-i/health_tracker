@@ -6,28 +6,13 @@ class ExercisesController < ApplicationController
 
   def create
     @exercise = Exercise.new(exercise_params)
-
-    if exercise_params[:calories_expended]
-      exercise_params[:calories_expended].positive? ? number = -exercise_params[:calories_expended] : exercise_params[:calories_expended]
-      @calorie = Calorie.new(date: exercise_params[:date], number: number)
-      respond_to do |format|
-        if @exercise.save && (@calorie.save || true)
-          format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
-        else
-          format.html { render :new }
-        end
-      end
-    else
-      respond_to do |format|
-        if @exercise.save
-          format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
-        else
-          format.html { render :new }
-        end
+    respond_to do |format|
+      if @exercise.save
+        format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
+      else
+        format.html { render :new }
       end
     end
-
-
   end
 
   def index
@@ -67,6 +52,6 @@ class ExercisesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_params
-      params.require(:exercise).permit(:date, :duration, :exercise_type_id, :calories)
+      params.require(:exercise).permit(:date, :duration, :exercise_type_id)
     end
 end
