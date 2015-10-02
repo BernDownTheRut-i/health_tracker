@@ -4,11 +4,7 @@
 
     <h3> This is a dashboard of your key health metrics.</h3>
 
-      <p>Total steps today: <%= @dashboard.steps %> steps</p>
-      <p>Total calories burned by taking steps today: <%= @steps_calories %> calories</p>
-      <p>Total calories burned through other exercise today: <%= Exercise.calories_burned_today%> calories</p>
-      <p>Total calories consumed today: <%=Caloric.consumed_today%> calories </p>
-
+    <p>The total number of calories consumed and burned today is: <%= Dashboard.net_calories_today %> calories</p>
 
       <p id="link"><%= link_to 'All Steps', steps_path %></p>
       <p id="link"><%= link_to 'All Exercises', exercises_path %></p>
