@@ -2,8 +2,16 @@
 
 one:
   date: 2015-10-01
-  number: 1
+  number: 2000
 
 two:
   date: 2015-10-01
-  number: 1
+  number: 50
+
+three:
+  date: 2015-10-02
+  number: 1500
+
+four:
+  date: 2015-10-03
+  number: 500
