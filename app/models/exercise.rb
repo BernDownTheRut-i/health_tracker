@@ -12,5 +12,3 @@ class Exercise < ActiveRecord::Base
   end
 
 end
-
-#<td><%= e.calories_burned %></td>
