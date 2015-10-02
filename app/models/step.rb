@@ -13,4 +13,8 @@ class Step < ActiveRecord::Base
     Step.where(date: day).all.sum(:number)
   end
 
+  def steps_calories_today
+    self.steps_on_day(Date.today) * 0.05
+  end
+
 end
