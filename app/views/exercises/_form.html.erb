@@ -10,6 +10,17 @@
       </ul>
     </div>
   <% end %>
+  <% if @calorie && @calorie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@calorie.errors.count, "error") %> prohibited this exercise from being saved:</h2>
+
+      <ul>
+      <% @calorie.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <div class="field">
     <%= f.label :date %><br>
@@ -23,6 +34,12 @@
     <%= f.label :exercise_type %><br>
     <%= f.collection_select :exercise_type_id, ExerciseType.order(:name), :id, :name, include_blank: true %> | <%= link_to 'New Exercise Type', new_exercise_type_path %>
   </div>
+
+  <div class="field">
+    <%= f.label :calories_expended %><br>
+    <%= f.number_field :calories_expended %>
+  </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

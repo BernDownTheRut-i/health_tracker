@@ -3,7 +3,11 @@
 one:
   date: 2015-10-01
   number: 9.99
+  updated_at: <%= Time.now %>
+  created_at: <%= Time.now %>
 
 two:
   date: 2015-10-01
   number: 9.99
+  updated_at: <%= Time.now %>
+  created_at: <%= Time.now %>
