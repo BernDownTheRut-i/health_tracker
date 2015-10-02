@@ -10,4 +10,11 @@ class ExerciseTest < ActiveSupport::TestCase
   #   assert_equal [t], Exercise.find(e.id).exercisetypes
   # end
 
+  test "exercise calories burned" do
+    exercise1 = exercises(:one)
+    assert_equal 465, exercise1.calories_burned
+    exercise2 = exercises(:two)
+    assert_equal 450, exercise2.calories_burned
+  end
+
 end
