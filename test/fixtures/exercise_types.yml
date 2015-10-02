@@ -2,6 +2,8 @@
 
 one:
   name: Jogging
+  burn_rate: 10
 
 two:
   name: Running
+  burn_rate: 15.5

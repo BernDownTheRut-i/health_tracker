@@ -53,6 +53,6 @@ class ExerciseTypesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def exercise_type_params
-      params.require(:exercise_type).permit(:name)
+      params.require(:exercise_type).permit(:name, :burn_rate)
     end
 end
