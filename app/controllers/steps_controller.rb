@@ -1,4 +1,7 @@
 class StepsController < ApplicationController
+  before_action :set_step, only: [:show, :edit, :update, :destroy]
+
+
   def index
     @steps = Step.all
   end
@@ -32,7 +35,7 @@ class StepsController < ApplicationController
 
   def destroy
     @step.destroy
-    redirect_to steps_url, notice: 'Step was successfully destroyed.' 
+    redirect_to steps_url, notice: 'Step was successfully destroyed.'
   end
 
   private
