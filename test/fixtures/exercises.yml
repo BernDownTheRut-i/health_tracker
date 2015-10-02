@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  date: 2015-10-01
+  date: <%= Time.now - 1.month %>
   exercise_type_id: 2
   duration: 30
 
 two:
-  date: 2015-10-01
+  date: <%= Time.now %>
   exercise_type_id: 1
   duration: 45
