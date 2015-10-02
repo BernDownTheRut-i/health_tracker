@@ -5,6 +5,7 @@
     <h3> This is a dashboard of your key health metrics.</h3>
 
       <p>Total steps today: <%= Step.steps_on_day(Date.today) %></p>
+      <p>Total calories burned by taking steps today: <%= Step.steps_calories_today%></p>
 
       <p id="link"><%= link_to 'All Steps', steps_path %></p>
       <p id="link"><%= link_to 'All Exercises', exercises_path %></p>

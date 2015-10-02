@@ -14,7 +14,7 @@ class StepTest < ActiveSupport::TestCase
   end
 
   test "number of calories burned by steps on a given day" do
-    assert 102.5, Step.steps_calories_on_day
+    assert 102.5, Step.steps_calories_today
   end
 
 end
