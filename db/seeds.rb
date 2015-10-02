@@ -261,3 +261,20 @@ exercise_types = [["Cycling, mountain bike, bmx"   , 9.966666667],
 exercise_types.each do |et|
   ExerciseType.create(name: et[0], burn_rate: et[1])
 end
+
+150.times do
+  Step.create(date: Date.today - rand(1..100).day, number: rand(1..1000))
+end
+
+150.times do
+  Weight.create(date: Date.today - rand(1..100).day, number: rand(100..500))
+end
+
+50.times do
+  Caloric.create(date: Date.today - rand(1..100).day, number: rand(1..2500))
+end
+
+types = ExerciseType.all
+50.times do
+  Exercise.create(date: Date.today - rand(1..100).day, exercise_type_id: types.sample.id, duration: rand(1..200))
+end
