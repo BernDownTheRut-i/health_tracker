@@ -9,5 +9,8 @@ class StepTest < ActiveSupport::TestCase
     assert 4, Step.step_count
   end
 
+  test "number of steps on a given day" do
+    assert 2050, Step.steps_on_day("2015-10-01")
+  end  
 
 end
