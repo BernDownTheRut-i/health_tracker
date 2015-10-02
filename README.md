@@ -4,4 +4,6 @@
 
 ## TODO
 - [x] Scaffold and create models, controllers, views manually
-- [ ] Write tests and fixtures
+- [x] Write some tests and fixtures
+- [ ] Write methods for dashboard with tests
+- [ ] Display on dashboard
