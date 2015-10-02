@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+  id: 1
   name: Jogging
   burn_rate: 10
 
 two:
+  id: 2
   name: Running
   burn_rate: 15.5
