@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
 
+  resources :calorics
   root 'dashboard#index'
   resources :exercises
   resources :exercise_types
-  resources :calories
   resources :weights
   resources :steps
   get 'dashboard/index'

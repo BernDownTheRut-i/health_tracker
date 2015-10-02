@@ -21,7 +21,7 @@ class ExercisesControllerTest < ActionController::TestCase
       post :create, exercise: { date: @exercise.date, exercise_type_id: @exercise.exercise_type_id, duration: @exercise.duration }
     end
 
-    assert_redirected_to exercise_path(assigns(:exercise))
+    assert_redirected_to exercises_path
   end
 
   test "should show exercise" do

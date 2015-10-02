@@ -10,15 +10,24 @@ class ExercisesController < ApplicationController
     if exercise_params[:calories_expended]
       exercise_params[:calories_expended].positive? ? number = -exercise_params[:calories_expended] : exercise_params[:calories_expended]
       @calorie = Calorie.new(date: exercise_params[:date], number: number)
-    end
-
-    respond_to do |format|
-      if @exercise.save && (@calorie.save || true)
-        format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
-      else
-        format.html { render :new }
+      respond_to do |format|
+        if @exercise.save && (@calorie.save || true)
+          format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
+        else
+          format.html { render :new }
+        end
+      end
+    else
+      respond_to do |format|
+        if @exercise.save
+          format.html { redirect_to exercises_path, notice: 'Exercise was successfully created.' }
+        else
+          format.html { render :new }
+        end
       end
     end
+
+
   end
 
   def index
