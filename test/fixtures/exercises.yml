@@ -2,8 +2,8 @@
 
 one:
   date: 2015-10-01
-  reference: 
+  exercise_type_id:
 
 two:
   date: 2015-10-01
-  reference: 
+  exercise_type_id: 

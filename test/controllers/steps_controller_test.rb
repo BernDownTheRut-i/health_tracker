@@ -36,7 +36,7 @@ class StepsControllerTest < ActionController::TestCase
 
   test "should update step" do
     patch :update, id: @step, step: { date: @step.date, number: @step.number }
-    assert_redirected_to step_path(assigns(:path))
+    assert_redirected_to_step_path(assigns(:path))
   end
 
   test "should destroy step" do
