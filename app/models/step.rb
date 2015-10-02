@@ -17,4 +17,8 @@ class Step < ActiveRecord::Base
     self.steps_on_day(Date.today) * 0.05
   end
 
+  def self.calories_burned (date)
+    self.steps_on_day(date) * 0.05
+  end
+
 end

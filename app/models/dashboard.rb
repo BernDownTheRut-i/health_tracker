@@ -4,12 +4,12 @@ class Dashboard
     @date = date
   end
 
-  def net_calories
-    Caloric.consumed_today - Step.steps_calories_on_day(@date) - Exercise.calories_burned_today
+  def self.net_calories_today
+    Caloric.consumed_today - Step.steps_calories_today - Exercise.calories_burned_today
   end
 
-  def steps
-    Step.steps_on_day(@date)
+  def self.net_calories (date)
+    Caloric.consumed(date) - Step.calories_burned(date) - Exercise.calories_burned(date)
   end
 
 end
