@@ -18,7 +18,7 @@ class ExerciseTypesControllerTest < ActionController::TestCase
 
   test "should create exercise_type" do
     assert_difference('ExerciseType.count') do
-      post :create, exercise_type: { burn_rate: @exercise_type.burn_rate, name: @exercise_type.name }
+      post :create, exercise_type: { burn_rate: @exercise_type.burn_rate, name: rand(1000000) }
     end
 
     assert_redirected_to exercise_types_path
@@ -36,7 +36,7 @@ class ExerciseTypesControllerTest < ActionController::TestCase
 
   test "should update exercise_type" do
     patch :update, id: @exercise_type, exercise_type: { burn_rate: @exercise_type.burn_rate, name: @exercise_type.name }
-    assert_redirected_to exercise_path(assigns(:exercise_type))
+    assert_redirected_to @exercise_type
   end
 
   test "should destroy exercise_type" do

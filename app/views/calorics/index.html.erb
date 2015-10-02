@@ -15,7 +15,7 @@
     <% @calorics.each do |caloric| %>
       <tr>
         <td><%= caloric.date %></td>
-        <td><%= caloric.numer %></td>
+        <td><%= caloric.number %></td>
         <td><%= link_to 'Show', caloric %></td>
         <td><%= link_to 'Edit', edit_caloric_path(caloric) %></td>
         <td><%= link_to 'Destroy', caloric, method: :delete, data: { confirm: 'Are you sure?' } %></td>
