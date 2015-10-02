@@ -18,5 +18,3 @@ class Step < ActiveRecord::Base
   end
 
 end
-
-# <p>Total calories burned by stepping today: <%= Step.steps_calories_today%></p>
