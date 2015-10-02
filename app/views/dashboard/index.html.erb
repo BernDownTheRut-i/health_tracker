@@ -1,2 +1,16 @@
-<h1>Dashboard#index</h1>
-<p>Find me in app/views/dashboard/index.html.erb</p>
+<div id="container">
+
+  <h1>Health Tracker Dashboard</h>
+
+    <h3> This is a dashboard of your key health metrics.</h3>
+
+      <p>Your total number of steps over all time is: <%=Step.sum_steps%></p>
+      <p>Your total number of step entries over all time is: <%=Step.step_count%></p>
+
+      <p id="link"><%= link_to 'All Steps', steps_path %></p>
+      <p id="link"><%= link_to 'All Exercises', exercises_path %></p>
+      <p id="link"><%= link_to 'All Calories Consumed', calories_path %></p>
+      <p id="link"><%= link_to 'All Weight Entries', weights_path %></p>
+
+
+</div>
