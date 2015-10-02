@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @caloric.date %>
+</p>
+
+<p>
+  <strong>Numer:</strong>
+  <%= @caloric.numer %>
+</p>
+
+<%= link_to 'Edit', edit_caloric_path(@caloric) %> |
+<%= link_to 'Back', calorics_path %>
