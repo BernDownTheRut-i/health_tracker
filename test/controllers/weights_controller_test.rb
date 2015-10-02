@@ -24,6 +24,7 @@ class WeightsControllerTest < ActionController::TestCase
     assert_redirected_to weight_path(assigns(:weight))
   end
 
+
   test "should show weight" do
     get :show, id: @weight
     assert_response :success
