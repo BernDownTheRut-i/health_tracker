@@ -4,13 +4,13 @@
 
     <h3> This is a dashboard of your key health metrics.</h3>
 
-    <p>The total number of calories consumed and burned today is: <%= @today.net_calories %> calories</p>
+    <p>The total number of calories consumed and burned <span id="day">today</span> is:<span id="information"> <%= @today.net_calories %> calories</span></p>
 
-    <p>The total number of calories consumed and burned yesterday is: <%= @yesterday.net_calories %> calories</p>
+    <p>The total number of calories consumed and burned <span id="day">yesterday</span> is: <span id="information"><%= @yesterday.net_calories %> calories</span></p>
 
-    <p>Your total number of calories consumed today is: <%=@calories_today%> calories</p>
-    <p>Your total number of calories burned through exercise today is: <%=@burned_today  %> calories</p>
-    <p>Your total number of steps taken today is: <%=@steps_today%> steps, which burned <%=@steps_burned%> calories</p>
+    <p>Your total number of calories consumed <span id="day">today</span> is: <span id="information"><%=@calories_today%> calories</span></p>
+    <p>Your total number of calories burned through exercise <span id="day">today</span> is:<span id="information"> <%=@burned_today  %> calories</span></p>
+    <p>Your total number of steps taken <span id="day">today</span> is:<span id="information"> <%=@steps_today%> steps</span>, which burned <span id="information"><%=@steps_burned%> calories</span></p>
 
       <p id="link"><%= link_to 'All Steps', steps_path %></p>
       <p id="link"><%= link_to 'All Exercises', exercises_path %></p>
