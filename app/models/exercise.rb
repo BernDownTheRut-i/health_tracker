@@ -5,13 +5,6 @@ class Exercise < ActiveRecord::Base
     ExerciseType.find(exercise_type_id).burn_rate * duration
   end
 
-  def self.calories_burned_today
-    cb = Exercise.where(date: Date.today).reduce(0) do |sum, e|
-      sum += e.calories_burned
-    end
-    cb.abs
-  end
-
   def self.calories_burned (date)
     cb = Exercise.where(date: date).reduce(0) do |sum, e|
       sum += e.calories_burned

@@ -10,7 +10,7 @@ class ExerciseTest < ActiveSupport::TestCase
   end
 
   test "exercise calories burned today" do
-    assert_equal 900, Exercise.calories_burned_today
+    assert_equal 900, Exercise.calories_burned(Date.today)
   end
 
 end
