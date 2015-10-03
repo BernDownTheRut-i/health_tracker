@@ -8,6 +8,10 @@
 
     <p>The total number of calories consumed and burned yesterday is: <%= @yesterday.net_calories %> calories</p>
 
+    <p>Your total number of calories consumed today is: <%=@calories_today%> calories</p>
+    <p>Your total number of calories burned through exercise today is: <%=@burned_today  %> calories</p>
+    <p>Your total number of steps taken today is: <%=@steps_today%> steps, which burned <%=@steps_burned%> calories</p>
+
       <p id="link"><%= link_to 'All Steps', steps_path %></p>
       <p id="link"><%= link_to 'All Exercises', exercises_path %></p>
       <p id="link"><%= link_to 'All Calories Consumed', calorics_path %></p>
