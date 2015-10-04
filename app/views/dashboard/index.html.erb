@@ -25,7 +25,15 @@
       <p id="link"><%= link_to 'All Weight Entries', weights_path %></p>
       <p id="link"><%= link_to 'All Exercise Types', exercise_types_path %></p>
 
+  </div id="rightcolumn">
+  <div>
+  <h2>Create a calorie entry</h2>
+    <div> <%= render '/calorics/form' %></div>
+  <h2>Create a steps entry</h2>
+    <div> <%= render '/steps/form' %></div>
+  <h2>Create an exercise entry</h2>
+    <div> <%= render '/exercises/form' %></div>
+  <h2>Create a weight entry</h2>
+    <div> <%= render '/weights/form' %></div>
   </div>
-  <div id="rightcolumn"> <%= render 'form' %></div>
-
 </div>
