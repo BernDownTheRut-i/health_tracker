@@ -5,6 +5,10 @@ class DashboardController < ApplicationController
 
     @yesterday = Dashboard.new(Date.today - 1.day)
 
+    @caloric = Caloric.new
+    @exercise = Exercise.new
+    @step = Step.new
+    @weight = Weight.new
   end
 
 end
