@@ -13,6 +13,11 @@ class DashboardController < ApplicationController
     @exercise = Exercise.new
     @step = Step.new
     @weight = Weight.new
+
+    @calorics = Caloric.all
+    @exercises = Exercise.all
+    @steps = Step.all
+    @weights = Weight.all
   end
 
 end
