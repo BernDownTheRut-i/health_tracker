@@ -13,7 +13,7 @@
       </tr>
     </thead>
     <tbody>
-      <% @exercises.each do |e| %>
+      <% @exercises.where(date: Date.today).each do |e| %>
         <tr>
           <td><%= e.date %></td>
           <td><%= e.exercise_type_id %></td>

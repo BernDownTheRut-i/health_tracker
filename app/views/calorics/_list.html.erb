@@ -11,7 +11,7 @@
       </thead>
 
       <tbody>
-        <% @calorics.each do |caloric| %>
+        <% @calorics.where(date: Date.today).each do |caloric| %>
           <tr>
             <td><%= caloric.date %></td>
             <td><%= caloric.number %></td>

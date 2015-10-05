@@ -11,7 +11,7 @@
     </thead>
 
     <tbody>
-      <% @steps.each do |step| %>
+      <% @steps.where(date: Date.today).each do |step| %>
         <tr>
           <td><%= step.date %></td>
           <td><%= step.number %></td>

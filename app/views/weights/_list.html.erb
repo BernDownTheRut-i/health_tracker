@@ -11,7 +11,7 @@
     </thead>
 
     <tbody>
-      <% @weights.each do |weight| %>
+      <% @weights.where(date: Date.today).each do |weight| %>
         <tr>
           <td><%= weight.date %></td>
           <td><%= weight.number %></td>
