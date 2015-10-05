@@ -1,8 +1,8 @@
-##Description
+#Description
 
 This program is a health tracker. The user can enter information about their exercise, steps taken, calories consumed, and daily weight.
 
-#Dashboard
+##Dashboard
 
 On the dashboard, the user sees the following:
 
